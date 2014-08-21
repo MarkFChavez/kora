@@ -1,0 +1,22 @@
+
+.row
+  .col-lg-12
+    .row.top20
+      .col-lg-6.col-lg-offset-3
+        %h2.center Welcome to Kora
+        %hr
+
+        = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form-horizontal top20", role: "form" }) do |f|
+          .form-group
+            = f.label :email, class: "col-lg-2 control-label"
+            .col-lg-10
+              = f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email"
+
+          .form-group
+            = f.label :password, class: "col-lg-2 control-label"
+            .col-lg-10
+              = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password"
+
+          .center
+            = f.submit "Sign in", class: "btn btn-primary btn-lg"
+        = render "devise/shared/links"
