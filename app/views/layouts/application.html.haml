@@ -8,6 +8,7 @@
   %body
     
     = render "layouts/flash"
+    = render "layouts/nav" if user_signed_in?
 
     .container
       .row
