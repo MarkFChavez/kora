@@ -1,11 +1,11 @@
 - if notice
-  .alert.alert-success.center
+  .alert.alert-success.center{ class: "#{'top50' if user_signed_in? }" }
     %span
       %i.fa.fa-check.fa-lg
       = notice
 
 - if alert
-  .alert.alert-danger.center
+  .alert.alert-danger.center{ class: "#{'top50' if user_signed_in? }" }
     %span
       %i.fa.fa-times.fa-lg
       = alert
