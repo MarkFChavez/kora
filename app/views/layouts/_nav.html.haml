@@ -7,13 +7,13 @@
         %span.icon-bar
         %span.icon-bar
 
-      = link_to "Kora", root_path, class: "navbar-brand"
+      = link_to "Kora", dashboard_path, class: "navbar-brand"
 
     .collapse.navbar-collapse#bs-example-navbar-collapse-1
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
           = link_to "#", class: "dropdown-toggle", data: { toggle: "dropdown" } do
-            %i.fa.fa-user.fa-lg
+            = gravatar_image_tag(current_user.email, gravatar: { size: 22 })
             = current_user.email
             %span.caret
 
@@ -22,3 +22,8 @@
               = link_to "Profile", "#"
             %li
               = link_to "Sign out", destroy_user_session_path, method: :delete
+
+        %li.dropdown
+          = link_to "#" do
+            %i.fa.fa-question.fa-lg
+            Add Question

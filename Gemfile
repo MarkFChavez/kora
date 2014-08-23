@@ -5,6 +5,11 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'devise'
+gem 'gravatar_image_tag'
+
+group :development, :test do
+  gem 'minitest-rails'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
