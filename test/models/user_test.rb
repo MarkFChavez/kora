@@ -1,14 +1,21 @@
 require 'test_helper'
 
-class TestUser < MiniTest::Test
+class TestUser < ActiveSupport::TestCase
+  def setup
+    @question = Question.new title: "Which is better? Ruby or Python?", body: "They cannot be compared"
+  end
+
   def test_that_it_will_add_question
-    question = Question.new
-    question.title = "Which is better? Ruby or Python?"
-    question.body = "They cannot be compared."
+    user = users :mark
+    user.ask @question
 
-    user = User.new
-    user.ask(question)
+    assert_includes user.questions, @question
+  end
 
-    user.questions.must_include question
+  def test_that_it_is_linked_to_a_user
+    user = users :mark
+    user.ask @question
+
+    assert_equal @question.user, user
   end
 end
