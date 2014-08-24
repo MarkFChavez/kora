@@ -6,9 +6,19 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'gravatar_image_tag'
+gem 'kaminari'
 
 group :development, :test do
-  gem 'minitest-rails'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'pry'
+  gem 'pry-rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'shoulda-matchers'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

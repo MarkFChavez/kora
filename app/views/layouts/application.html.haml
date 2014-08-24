@@ -9,7 +9,7 @@
     = render "layouts/nav" if user_signed_in?
     = render "layouts/flash"
 
-    .container
+    .container{ class: "#{'top70' if user_signed_in?}" }
       .row
         .col-lg-12
           = yield

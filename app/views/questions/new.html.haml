@@ -1,0 +1,13 @@
+
+.row
+  .col-lg-6.col-lg-offset-3
+    = form_for @question do |f|
+      = error_messages_for(@question)
+
+      .row
+        .col-lg-12
+          = f.label :body, "Question"
+          = f.text_area :body, class: "form-control", placeholder: "What's your question?", rows: 10
+
+      .top20
+        = f.submit "Add", class: "btn btn-primary btn-lg"
