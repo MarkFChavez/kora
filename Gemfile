@@ -6,7 +6,8 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'gravatar_image_tag'
-gem 'kaminari'
+gem 'kaminari' 
+gem 'skylight'
 
 group :development, :test do
   gem 'rspec-rails'
