@@ -1,4 +1,17 @@
 .row
-  .col-lg-8.col-lg-offset-2
+  .col-lg-2
+    %small.mini.bold FEEDS
+
+    %ul.nav.nav-pills.nav-stacked
+      %li.active
+        = link_to "Top Stories", "#", class: "mini"
+      %li
+        = link_to "Questions & Answers", "#", class: "mini"
+      %li
+        = link_to "Blog Posts", "#", class: "mini"
+    
+  .col-lg-8.padding15
     = render(@questions) || "No questions"
+
+  .col-lg-2
 

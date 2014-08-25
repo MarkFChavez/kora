@@ -8,4 +8,10 @@ FactoryGirl.define do
     body { "sample body" }
     user
   end
+
+  factory :answer do
+    body { "great question!" }
+    user
+    question
+  end
 end

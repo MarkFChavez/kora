@@ -18,10 +18,27 @@
   margin-bottom: 20px;
 }
 
+.padding15 {
+  padding: 15px;
+}
+
 .bold {
   font-weight: bold;
 }
 
 .center {
   text-align: center;
+}
+
+.mini {
+  font-size: 14px;
+}
+
+.link {
+  color: #000;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #000;
 }

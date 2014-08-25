@@ -21,3 +21,21 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      question:
+        body: "Question"
+      answer:
+        body: "Answer"
+
+    errors:
+      models:
+        question:
+          attributes:
+            body:
+              blank: "can't be blank"
+        answer:
+          attributes:
+            body:
+              blank: "can't be blank"
+

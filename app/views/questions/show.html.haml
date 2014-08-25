@@ -1,0 +1,6 @@
+.row
+  .col-lg-6.col-lg-offset-3
+    .lead= @answer_list.question.body
+
+    - @answers.each do |answer|
+      %p= answer.body

@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   end
 
   resource :dashboard
-  resources :questions, only: [:new, :create]
+  resources :questions, only: [:show, :new, :create] do
+    resources :answers, only: [:new, :create]
+  end
 end

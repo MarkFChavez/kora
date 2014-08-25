@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :questions, dependent: :destroy
 
-  def ask question
+  def add_question question
     self.questions << question
   end
 end
