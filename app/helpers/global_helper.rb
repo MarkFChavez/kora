@@ -13,4 +13,8 @@ module GlobalHelper
       end
     end
   end
+
+  def g email, options = {}
+    gravatar_image_tag email, options
+  end
 end

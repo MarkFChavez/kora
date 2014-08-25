@@ -11,7 +11,7 @@
         = link_to "Blog Posts", "#", class: "mini"
     
   .col-lg-8.padding15
-    = render(@questions) || "No questions"
+    = render partial: "questions/question", collection: @questions
 
   .col-lg-2
 

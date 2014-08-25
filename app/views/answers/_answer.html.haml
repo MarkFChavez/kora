@@ -1,0 +1,8 @@
+.row
+  .col-lg-12
+    %small
+      = g answer.user.try(:email), gravatar: { size: 22 }
+      = answer.user.try(:email)
+      %small.bold= "#{time_ago_in_words(answer.created_at).upcase} AGO"
+    %div
+      = answer.body

@@ -7,4 +7,6 @@
 
       .row
         .col-lg-12
-          = link_to "Write Answer", new_question_answer_path(question), class: "mini"
+          = link_to "Write Answer", new_question_answer_path(question), class: "mini btn btn-default"
+          = link_to question, class: "mini btn btn-inverse" do
+            = pluralize question.answers.size, "answer"
