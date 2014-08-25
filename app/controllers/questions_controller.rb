@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   def show
     @answer_list = AnswerList.new get_question
-    @answers = @answer_list.all
+    @answers = @answer_list.all.order(created_at: :desc)
     @answers = @answers.page(params[:page])
   end
 

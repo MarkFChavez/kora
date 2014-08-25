@@ -1,16 +1,9 @@
 .row
   .col-lg-6.col-lg-offset-3
-    = form_for [@question, @answer] do |f|
-      .row
-        .col-lg-12
-          .lead= @question.body
+    .row
+      .col-lg-12
+        .lead= @question.body
 
-      = error_messages_for(@answer)
+    = render "form", question: @question, answer: @answer
+    
 
-      .row
-        .col-lg-12
-          = f.label :body, "Answer"
-          = f.text_area :body, class: "form-control", placeholder: "Write your answer", rows: 10
-
-      .top20
-        = f.submit "Add", class: "btn btn-primary btn-lg"

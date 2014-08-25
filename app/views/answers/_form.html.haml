@@ -1,0 +1,10 @@
+= form_for [question, answer] do |f|
+  = error_messages_for(answer)
+
+  .row
+    .col-lg-12
+      = f.label :body, "Answer"
+      = f.text_area :body, class: "form-control", placeholder: "Write your answer", rows: 5
+
+  .top20
+    = f.submit "Add", class: "btn btn-primary btn-lg"

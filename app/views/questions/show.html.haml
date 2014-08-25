@@ -1,6 +1,9 @@
 .row
   .col-lg-6.col-lg-offset-3
-    .lead= @answer_list.question.body
-
+    .lead
+      = @answer_list.question.body
+      .mini.bold
+        = link_to "Add answer", new_question_answer_path(@answer_list.question)
+    
     = render partial: "answers/answer", collection: @answers
     
