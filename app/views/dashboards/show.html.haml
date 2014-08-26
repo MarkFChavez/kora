@@ -1,19 +1,9 @@
 .row
   .col-lg-2
-    %small.mini.bold FEEDS
-
-    %ul.nav.nav-pills.nav-stacked
-      %li.active
-        = link_to "Top Stories", "#", class: "mini"
-      %li
-        = link_to "Questions & Answers", "#", class: "mini"
-      %li
-        = link_to "Blog Posts", "#", class: "mini"
+    = render "dashboards/feeds"
     
-  .col-lg-8.padding15
-    = render partial: "questions/question", collection: @questions
+  .col-lg-7.padding15
+    = render partial: "questions/question", collection: @dashboard.questions
 
-    = paginate @questions
-
-  .col-lg-2
-
+  .col-lg-3
+    = render "dashboards/who_to_follow", users: @dashboard.suggested_users(current_user)

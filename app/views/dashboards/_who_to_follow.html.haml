@@ -1,0 +1,15 @@
+%small.mini.bold Do you know them?
+
+- users.each do |user|
+  .row.top10
+    .col-lg-12
+      %small
+        = g user.email, gravatar: { size: 22 }
+        = user.email
+  .row
+    .col-lg-12
+      %small
+        - if current_user.following? user
+          = link_to "Unfollow", relationship_path(user), method: :delete, class: "badge alert-danger"
+        - else
+          = link_to "Follow", relationships_path(followable: user), method: :post, class: "badge alert-success"
